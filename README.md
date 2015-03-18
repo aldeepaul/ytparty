@@ -1,6 +1,6 @@
 # ytparty
 some youtube public playlist POC
-
+```
 clone
 npm install;
 cd public;
@@ -9,3 +9,4 @@ npm install;
 npm start;
 cd public;
 npm start;
+```
