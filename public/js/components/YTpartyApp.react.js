@@ -2,6 +2,7 @@ var React = require('react');
 var YTpartyStore = require('../stores/YTpartyStore');
 var YTpartyQueue = require('./YTpartyQueue.react');
 var YTpartyPlayer = require('./YTpartyPlayer.react');
+var YTpartyForm = require('./YTpartyForm.react');
 var YTpartyActions = require('../actions/YTpartyActions');
 
 
@@ -33,6 +34,7 @@ var YTpartyApp = React.createClass({
 	    	YTP app
 	    	<YTpartyPlayer data={this.state.playing}/>
 	    	<YTpartyQueue queueList={this.state.allQueue} />
+	    	<YTpartyForm id="yey" placeholder="paste YT url here"/>
 	      </div>
 	  	);
   	},

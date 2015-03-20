@@ -39,6 +39,10 @@ var playNext = function(){
   _queue.shift();
 };
 
+var addItem = function(data){
+  _queue.push(data);
+}
+
 var YTpartyStore = assign({}, EventEmitter.prototype, {
 
   getQueue: function() {
@@ -70,7 +74,11 @@ var YTpartyStore = assign({}, EventEmitter.prototype, {
 
 AppDispatcher.register(function(action) { 
 
-  switch(action.actionType) {    
+  switch(action.actionType) {         
+    case YTpartyConstants.YTP_CREATE:
+      addItem(action.data);
+      YTpartyStore.emitChange();
+      break;
     case YTpartyConstants.YTP_PLAY:
       playItem(action.data);
       YTpartyStore.emitChange();
