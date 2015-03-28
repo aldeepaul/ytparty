@@ -1,6 +1,6 @@
 # ytparty
 some youtube public playlist POC
-(moved to public repo)
+(moved to private repo)
 ```
 clone
 npm install;
